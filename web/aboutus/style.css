@@ -1,0 +1,159 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+.wrapper > * {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+    border-radius: 10px;
+
+}
+.nav {
+    
+    justify-content: right;
+    border-radius: 2px;
+    border-width: 10px;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a{
+    color: black;
+    text-decoration: none;
+    padding: 5px 20px;
+    font-family: poppins;
+    font-size: 20px;
+}
+.nav-area li a:hover{
+    background: #009897;
+    color: #000;
+}
+.logo {
+  
+    float: left;
+    background: url(../image/pic2.png) no-repeat 50% 50%;
+    background-size: contain;
+    width: 180px;
+    margin-left: 20px;
+    height: 18px;
+    
+}
+.header {
+    background: white;
+    height: 100%; 
+
+}
+.header h1{
+    text-decoration: underline #009897;
+    text-transform: uppercase;
+    color: black;
+
+    
+}
+.header:hover{
+    color: #009897;
+}
+.header p{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 25px;
+    
+
+}
+.footer{
+
+    height: 100px;
+    color: #009897;
+}
+.footer h1 a{
+    color: #009897;
+}
+.footer p{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.footer p:hover{
+    color: black;
+}
+.skills  {
+    display: contents;
+    font-weight: 700;
+    font-size: 30px;
+}
+.skills  a{
+    color: #009897;
+}
+.skills a:hover{
+    color: black;
+}
+.main {
+    text-align: left;
+    height: 360px;
+    font-size: 24px;
+
+    background-image: url(../image/aboutus/pic1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+    
+}@keyframes animate{
+    0%{
+        background-image: url(../image/aboutus/pic2.jpg);
+    }20%{
+        background-image: url(../image/aboutus/pic3.jpg);
+    }40%{
+        background-image: url(../image/aboutus/pic4.jpg);
+    }60%{
+        background-image: url(../image/aboutus/pic5.jpg);
+    }80%{
+        background-image: url(../image/aboutus/pic6.jpg);
+    }100%{
+        background-image: url(../image/aboutus/pic1.jpg);
+    }
+
+}
+
+.aside2 {
+    background: #009897;
+    font-size: 20px;
+    height: 100%;
+}
+@media all and (min-width:800px){
+    .main{
+        flex: 3;
+    }
+    .aside2{
+        order:2;
+    }
+    .main{
+        order: 2;
+
+    }
+    .footer{
+        order: 4
+    }
+}
+@media all and (min-width: 600px){
+    .aside{
+        flex: 1;
+    }
+}
